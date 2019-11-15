@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Projects from "../components/Projects"
 
 const IndexPage = () => (
   <Layout>
@@ -14,10 +15,7 @@ const IndexPage = () => (
       My name is Nastya. I am 26 years old and I have been in programming for 6
       years. I started from ActionScript/Flex
     </p>
-
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */}
+    <Projects />
   </Layout>
 )
 

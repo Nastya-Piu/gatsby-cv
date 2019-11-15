@@ -2,11 +2,23 @@
   {
     "name": "Tripstore",
     "site": "http://tripstore.by",
-    "image": "./images/1-1.png"
+    "image": "./images/2-1.png",
+    "technologies": ["Angular 4", "Node js", "HTML", "CSS", "JS"]
+  },
+  {
+    "name": "Inspectorio",
+    "site": "https://www.inspectorio.com/",
+    "technologies": ["Angular 7", "HTML", "CSS", "JS", "GitLab"]
   },
   {
     "name": "Learning Banknotes System",
     "site": "http://learning.banknotes.by",
-    "image": "./images/1-1.png"
+    "image": "./images/1-1.png",
+    "technologies": ["Angular 4", "HTML", "JS", "CSS", "Stylus"]
+  },
+  {
+    "name": "Stacktome",
+    "site": "https://stacktome.com/",
+    "technologies": ["Angular 5", "HTML", "CSS", "JS", "Jenkins"]
   }
 ]

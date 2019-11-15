@@ -1,0 +1,24 @@
+.projectLink {
+  color: #4cadb9;
+}
+
+.imageWrapper {
+  margin: 20px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  img {
+    width: 100%;
+  }
+}
+
+.technology {
+  color: #555;
+  margin-right: 15px;
+  padding: 10px 10px 0 0px;
+  border-radius: 0px;
+}
