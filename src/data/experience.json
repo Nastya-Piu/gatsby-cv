@@ -1,0 +1,21 @@
+[
+  {
+    "company": "Razlik",
+    "position": "Full-Stack software engineer",
+    "year": "2014",
+    "time": "4.5",
+    "notes": "Was responsible for building sites from scratch and projecting"
+  },
+  {
+    "company": "Grinteq",
+    "position": "Front-End developer",
+    "year": "2017",
+    "time": "0.3",
+    "notes": "Was creating components for the Angular application"
+  },
+  {
+    "company": "ItechArt",
+    "position": "Full-Stack developer",
+    "notes": "Responsible for some projects"
+  }
+]

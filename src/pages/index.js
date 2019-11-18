@@ -1,19 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Projects from "../components/Projects"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    {/* <h1>Anastasiya Piuslkaya</h1> */}
-    <p>Welcome to my new CV site. Now I will tell you who I am.</p>
     <p>
-      My name is Nastya. I am 26 years old and I have been in programming for 6
-      years. I started from ActionScript/Flex
+      Welcome to my new CV site. My name is Nastya. I have been in programming
+      for almost 6 years. First I started with Flex/ActionScript, after that I
+      have been working on project with AngularJS in Front-end and NodeJs REST
+      services for almost 2 years. I was responsible for both parts and worked
+      with SQL queries to MySQL database. After a while I started to use Angular
+      2+ (started with version 4) and used it in my last two projects.
     </p>
     <Projects />
   </Layout>

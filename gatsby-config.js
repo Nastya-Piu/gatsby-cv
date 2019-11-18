@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Staisy Piu CV`,
+    title: `Staisy Piu`,
     description: `This is site for showing what technologies I know, in what projects I have worked with`,
     author: `@staisy_piu`,
   },
@@ -13,6 +13,10 @@ module.exports = {
         // name: `images`,
         path: `${__dirname}/src/data`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {},
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -38,5 +42,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    //http://gullible-pear.surge.sh/
   ],
 }

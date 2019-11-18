@@ -16,10 +16,10 @@ const Header = ({ siteTitle }) => (
           <Link to="/about">About me</Link>
         </li>
         <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-          <Link to="/page-2">Technologies and Skills</Link>
+          <Link to="/skills">Skills</Link>
         </li>
         <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-          <Link to="/page-3"></Link>
+          <Link to="/experience">Experience</Link>
         </li>
       </ul>
     </div>

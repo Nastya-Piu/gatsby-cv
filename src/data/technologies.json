@@ -1,0 +1,37 @@
+[
+  {
+    "name": "JavaScript",
+    "year": 2010,
+    "level": 60
+  },
+  {
+    "name": "CSS",
+    "year": 2010,
+    "level": 80
+  },
+  {
+    "name": "HTML",
+    "year": 2010,
+    "level": 90
+  },
+  {
+    "name": "Angular Js",
+    "year": 2014,
+    "level": 60
+  },
+  {
+    "name": "Angular",
+    "year": 2015,
+    "level": 80
+  },
+  {
+    "name": "React",
+    "year": 2019,
+    "level": 40
+  },
+  {
+    "name": "Node js",
+    "year": 2019,
+    "level": 40
+  }
+]

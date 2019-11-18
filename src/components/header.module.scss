@@ -1,10 +1,12 @@
 .header {
-  //background: rebeccapurple;
-  margin-bottom: 1.45rem;
+  background: #20233a;
+  margin-bottom: 20px;
   a {
-    color: black;
+    color: white;
+    &:hover {
+      color: white;
+    }
   }
-
   h1 {
     margin: 0;
     display: inline-block;
