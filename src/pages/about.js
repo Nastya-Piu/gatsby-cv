@@ -19,11 +19,21 @@ const About = () => {
     }
   `)
 
+  console.log(image)
+
   return (
     <Layout>
-      <SEO title="About me" />
+      <SEO title="About me" description="" />
       <h1>About me</h1>
-      <p>I love programming and other things</p>
+      <p>
+        My name is Nastya. I have been in programming for almost 6 years. I love
+        it and I am good at it. First I started with Flex/ActionScript, after
+        that I have been working on project with AngularJS in Front-end and
+        NodeJs REST services for almost 2 years. I was responsible for both
+        parts and worked with SQL queries to MySQL database. After a while I
+        started to use Angular 2+ (started with version 4) and used it in my
+        last two projects.
+      </p>
       <div className="row">
         <div className="col-md-6">
           <Img fluid={image.file.childImageSharp.fluid} />

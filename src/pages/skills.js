@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -26,6 +26,13 @@ const Skills = () => {
     <Layout>
       <SEO title="Thechnologies and skills" />
       <h1>Thechnologies and skills</h1>
+      <p>
+        Some text about my best skills. This is description of some of my
+        skills, what frameworks I used, what libraries I prefer. This is
+        description of some of my skills, what frameworks I used, what libraries
+        I prefer. This is description of some of my skills, what frameworks I
+        used, what libraries I prefer.
+      </p>
       <div>
         {skills.map(({ node }) => (
           <Technology

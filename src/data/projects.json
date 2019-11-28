@@ -1,14 +1,15 @@
 [
   {
-    "name": "Tripstore",
-    "site": "http://tripstore.by",
-    "image": "./images/2-1.png",
-    "technologies": ["Angular 4", "Node js", "HTML", "CSS", "JS"]
-  },
-  {
     "name": "Inspectorio",
     "site": "https://www.inspectorio.com/",
+    "image": "./images/3-1.png",
     "technologies": ["Angular 7", "HTML", "CSS", "JS", "GitLab"]
+  },
+  {
+    "name": "Stacktome",
+    "site": "https://stacktome.com/",
+    "image": "./images/4-1.png",
+    "technologies": ["Angular 5", "HTML", "CSS", "JS", "Jenkins"]
   },
   {
     "name": "Learning Banknotes System",
@@ -17,8 +18,9 @@
     "technologies": ["Angular 4", "HTML", "JS", "CSS", "Stylus"]
   },
   {
-    "name": "Stacktome",
-    "site": "https://stacktome.com/",
-    "technologies": ["Angular 5", "HTML", "CSS", "JS", "Jenkins"]
+    "name": "Tripstore",
+    "site": "http://tripstore.by",
+    "image": "./images/2-1.png",
+    "technologies": ["Angular 4", "Node js", "HTML", "CSS", "JS"]
   }
 ]

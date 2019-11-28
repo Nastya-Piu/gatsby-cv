@@ -3,20 +3,26 @@ import styles from "./ProjectCard.module.scss"
 import Img from "gatsby-image"
 
 const ProjectCard = ({ project }) => {
-  const { name, site, image, technologies } = project
+  const { name, site, image, technologies, description } = project
 
   return (
     <div className="col-md-6">
-      <h3>{name}</h3>
-      <p>
-        <a className={styles.projectLink} href={site} target="_blank">
+      <h2>{name}</h2>
+      <b>
+        <a
+          className={styles.projectLink}
+          href={site}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {site}
         </a>
-      </p>
+      </b>
+      <p>{description}</p>
       {technologies.length && (
         <div>
           {technologies.map(technology => (
-            <span className={styles.technology}>{technology}</span>
+            <div className={styles.technology}>{technology}</div>
           ))}
         </div>
       )}

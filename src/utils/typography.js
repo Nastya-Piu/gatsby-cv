@@ -1,6 +1,8 @@
 import Typography from "typography"
-import fairyGateTheme from "typography-theme-fairy-gates"
 const typography = new Typography({
+  body: {
+    fontSize: "1.2rem",
+  },
   h1: {
     margin: "0.5rem 0",
   },

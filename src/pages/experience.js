@@ -26,6 +26,12 @@ const Experience = () => {
     <Layout>
       <SEO title="About me" />
       <h1>Experience</h1>
+      <p>
+        Some text about my experience, challenging tasks, ineresting projects,
+        process experience. Some text about my experience, challenging tasks,
+        ineresting projects, process experience. Some text about my experience,
+        challenging tasks, ineresting projects, process experience.
+      </p>
       <div className="experience-block">
         {edges.map(({ node }) => (
           <div className="experience-item" key={node.company}>

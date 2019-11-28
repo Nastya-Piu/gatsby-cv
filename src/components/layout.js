@@ -14,6 +14,7 @@ import "./layout.scss"
 import layoutStyles from "./layout.module.scss"
 import Footer from "./shared/footer"
 import { Transition } from "react-transition-group"
+import StyleContext from "./context/StyleContext"
 
 const duration = 500
 
@@ -32,6 +33,7 @@ const transitionStyles = {
 
 const Layout = ({ children }) => {
   const [animate, setAnimate] = useState(false)
+  const [themed, setTheme] = useState(false)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -44,11 +46,21 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     if (!animate) setAnimate(true)
-  })
+  }, [animate])
+
+  const changeTheme = () => {
+    console.log("Change theme" + themed)
+    if (!themed) {
+      setTheme(true)
+    } else setTheme(false)
+  }
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <StyleContext.Provider value={themed}>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        onChangeTheme={changeTheme}
+      />
       <Transition in={animate} timeout={500}>
         {state => (
           <div
@@ -60,7 +72,7 @@ const Layout = ({ children }) => {
         )}
       </Transition>
       <Footer />
-    </>
+    </StyleContext.Provider>
   )
 }
 

@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ProjectCard from "./shared/ProjectCard"
 
-const Projects = () => {
-  const data = useStaticQuery(graphql`
+export default () => {
+  const projectsData = useStaticQuery(graphql`
     query {
       allProjectsJson {
         edges {
@@ -24,11 +24,17 @@ const Projects = () => {
     }
   `)
 
-  const projects = data.allProjectsJson.edges
+  const projects = projectsData.allProjectsJson.edges
 
   return (
     <>
-      <h2>Projects:</h2>
+      <h1>Projects</h1>
+      <p>
+        This is some text about projects I have been working on. There was
+        different processes, technologies, methodology. There was different
+        processes, technologies, methodology. There was different processes,
+        technologies, methodology.
+      </p>
       <div className="row">
         {projects.map(({ node }) => (
           <ProjectCard key={node.name} project={node} />
@@ -37,5 +43,3 @@ const Projects = () => {
     </>
   )
 }
-
-export default Projects

@@ -13,7 +13,6 @@ const Level = styled.div`
 const LevelBar = styled.div`
   background-color: #4cadb9;
   height: 100%;
-  width: 0;
   opacity: 0;
   padding: 2px 6px;
   transition: all ease-in-out 0.5s;
@@ -27,7 +26,7 @@ const Technology = ({ title, year, level }) => {
       setTimeout(() => {
         setAnimate(true)
       }, 500)
-  })
+  }, [animate])
 
   return (
     <div>
@@ -48,7 +47,7 @@ const Technology = ({ title, year, level }) => {
                 }`,
               }}
             >
-              {title}
+              {level} %
             </LevelBar>
           )}
         </Transition>
