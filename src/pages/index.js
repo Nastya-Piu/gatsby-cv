@@ -70,7 +70,7 @@ const IndexPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub size={32} />
+                <FaGithub size={28} />
               </a>
             </div>
             <div className="social-link">
@@ -79,12 +79,12 @@ const IndexPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin size={32} />
+                <FaLinkedin size={28} />
               </a>
             </div>
             <div className="social-link">
               <a href="mailto: workwithpiu@gmail.com">
-                <FaEnvelope size={32} />
+                <FaEnvelope size={28} />
               </a>
             </div>
           </div>
@@ -92,7 +92,7 @@ const IndexPage = () => {
         <p>
           My name is Nastya and I am full-stack javascript engineer. I have
           experience in programming for almost 7 years. I like programming and
-          good at it.First I started with Flex/ActionScript, after that I have
+          good at it. First I started with Flex/ActionScript, after that I have
           been working on project with AngularJS in Front-end and NodeJs REST
           services for almost 2 years. I was responsible for both parts and
           worked with SQL queries to MySQL database. After a while I started to

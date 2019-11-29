@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-const circlesCount = 400
+const circlesCount = 200
 const colorArray = ["#046975", "#2EA1D4", "#4cadb9", "#81b5f1", "#20233a"]
 
 const debounce = func => {
@@ -13,20 +13,21 @@ const debounce = func => {
   }
 }
 
-const Circle = function(x, y, dx, dy, radius, speed = 2) {
+const Circle = function(x, y, dx, dy, radius, speed = 0.9, width) {
   this.x = x
   this.y = y
   this.speed = speed
   this.dx = dx
   this.dy = dy
   this.radius = radius
+  this.width = width
   this.counter = 0
   this.color = colorArray[Math.floor(Math.random() * colorArray.length)]
   this.opacity = 0.05 + Math.random() * 0.5
 
   var signHelper = Math.floor(Math.random() * 2)
 
-  if (signHelper == 1) {
+  if (signHelper === 1) {
     this.sign = -1
   } else {
     this.sign = 1
@@ -37,8 +38,8 @@ const Circle = function(x, y, dx, dy, radius, speed = 2) {
     context.beginPath()
 
     context.arc(
-      this.x + Math.cos(this.counter / 100) * this.radius,
-      this.y + Math.sin(this.counter / 100) * this.radius,
+      this.x + Math.cos(this.counter / 100) * 40,
+      this.y + Math.sin(this.counter / 100) * 40,
       this.radius,
       0,
       Math.PI * 2,
@@ -86,7 +87,10 @@ class CanvasCircles extends Component {
           const y = Math.random() * (300 - radius * 2) + radius
           const dx = (Math.random() - 0.1) * 2
           const dy = (Math.random() - 0.1) * 2
-          context.state.circleArray.push(new Circle(x, y, dx, dy, radius))
+          const size = 5 + Math.random() * 50
+          context.state.circleArray.push(
+            new Circle(x, y, dx, dy, radius, 0.9, size)
+          )
         }
         context.animate()
       }.bind(context)

@@ -2,14 +2,11 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useContext } from "react"
 import styles from "./header.module.scss"
-import { FaPaintBrush } from "react-icons/fa"
-import StyleContext from "./context/StyleContext"
+import ThemeTogglerIcon from "./shared/ThemeTogglerIcon"
 
-const Header = ({ siteTitle, onChangeTheme }) => {
-  const theme = useContext(StyleContext)
-  console.log(theme)
+const Header = ({ siteTitle }) => {
   return (
-    <header className={theme ? styles.headerBeauty : styles.header}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <h1 className={styles.headerH1}>
           <Link className={styles.headerLink} to="/">
@@ -26,16 +23,7 @@ const Header = ({ siteTitle, onChangeTheme }) => {
           <li style={{ display: `inline-block`, marginRight: `1rem` }}>
             <Link to="/experience">Experience</Link>
           </li>
-          <li
-            style={{
-              display: `inline-block`,
-              marginRight: `1rem`,
-              color: "#eee",
-              cursor: "pointer",
-            }}
-          >
-            <FaPaintBrush onClick={onChangeTheme} />
-          </li>
+          <ThemeTogglerIcon />
         </ul>
       </div>
     </header>

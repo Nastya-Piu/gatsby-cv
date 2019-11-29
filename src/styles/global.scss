@@ -1,6 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya&display=swap");
+
 code {
   background: white;
   color: green;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+  .animated-bg,
+  header {
+    background: black;
+  }
+
+  .social-link {
+    a {
+      color: white;
+    }
+  }
 }
 
 .social-link {
@@ -39,7 +56,7 @@ code {
   }
 
   .experience-year {
-    background: black;
+    background: #483d47;
     color: white;
     height: 45px;
     border-radius: 50%;
@@ -58,10 +75,13 @@ code {
   h1 {
     margin-bottom: 10px;
   }
+  h3 {
+    font-weight: normal;
+  }
 }
 
 .animated-bg {
-  background: #483d47;
+  background: #f7f6f6;
   position: absolute;
   width: 100%;
   overflow: hidden;
@@ -69,4 +89,10 @@ code {
   canvas {
     position: absolute;
   }
+}
+
+.theme-toggler {
+  cursor: pointer;
+  color: white;
+  display: inline-block;
 }
