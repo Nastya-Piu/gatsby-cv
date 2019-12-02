@@ -36,7 +36,6 @@ const Circle = function(x, y, dx, dy, radius, speed = 0.9, width) {
   this.update = function(context) {
     this.counter += this.sign * this.speed
     context.beginPath()
-
     context.arc(
       this.x + Math.cos(this.counter / 100) * 40,
       this.y + Math.sin(this.counter / 100) * 40,
@@ -55,6 +54,7 @@ class CanvasCircles extends Component {
   constructor() {
     super()
     this.canvasRef = React.createRef()
+    this.reqRef = null
 
     this.state = {
       circleArray: [],
@@ -68,7 +68,7 @@ class CanvasCircles extends Component {
       this.state.circleArray[i].update(this.state.context)
     }
 
-    requestAnimationFrame(() => {
+    this.reqRef = requestAnimationFrame(() => {
       this.animate()
     })
   }
@@ -107,6 +107,7 @@ class CanvasCircles extends Component {
     window.addEventListener(
       "resize",
       debounce(() => {
+        if (this.reqRef) cancelAnimationFrame(this.reqRef)
         this.init(canvas)
       })
     )

@@ -1,21 +1,28 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CanvasCircles from "../components/shared/CanvasCircles"
+import useLocalStorage from "../components/hooks/useLocalStorage"
+
+const margin = css`
+  margin: 20px auto;
+`
 
 const Line = styled.hr`
   width: 25%;
-  border: 4px solid coral;
+  border: 1px solid white;
   height: auto;
-  margin: 10px auto;
+  ${margin}
 `
 
 const IndexPage = () => {
+  const [sawIndex, setSawIndex] = useLocalStorage("sawIndex")
+
   const image = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "images/1.jpeg" }) {
@@ -63,6 +70,7 @@ const IndexPage = () => {
               <i>Full-stack javascript developer</i>
             </h3>
           </div>
+          <Line />
           <div className="social-links text-center">
             <div className="social-link">
               <a
@@ -96,9 +104,21 @@ const IndexPage = () => {
           been working on project with AngularJS in Front-end and NodeJs REST
           services for almost 2 years. I was responsible for both parts and
           worked with SQL queries to MySQL database. After a while I started to
-          use Angular 2+ (started with version 4) and used it in my last two
-          projects.
+          use Angular 2+ (started with version 4) and used it for the several
+          projects. Some time later I was intended to learn React and I tried to
+          use it in some personal projects. After that I was assigned to the
+          some projects that has React in its stack.
         </p>
+        <div className="text-center">
+          {!!!sawIndex && (
+            <button
+              className="btn btn-primary"
+              onClick={() => setSawIndex(true)}
+            >
+              I saw this page
+            </button>
+          )}
+        </div>
 
         {/* <div>
         <Img fluid={image.background.childImageSharp.fluid} />

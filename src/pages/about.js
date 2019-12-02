@@ -19,8 +19,6 @@ const About = () => {
     }
   `)
 
-  console.log(image)
-
   return (
     <Layout>
       <SEO title="About me" description="" />
