@@ -66,9 +66,9 @@ const IndexPage = () => {
           />
           <div className="profile-title">
             <h1>Anastasiya Piulskaya</h1>
-            <h3 className="text-muted">
+            <span className="text-muted" style={{ fontSize: "1.5em" }}>
               <i>Full-stack javascript developer</i>
-            </h3>
+            </span>
           </div>
           <Line />
           <div className="social-links text-center">

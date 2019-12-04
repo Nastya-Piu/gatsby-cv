@@ -23,7 +23,9 @@ const Header = ({ siteTitle }) => {
           <li style={{ display: `inline-block`, marginRight: `1rem` }}>
             <Link to="/experience">Experience</Link>
           </li>
-          <ThemeTogglerIcon />
+          <li>
+            <ThemeTogglerIcon />
+          </li>
         </ul>
       </div>
     </header>

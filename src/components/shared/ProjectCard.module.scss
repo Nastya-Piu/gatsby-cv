@@ -7,16 +7,33 @@
   cursor: pointer;
   width: 100%;
   overflow: hidden;
+  position: relative;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   transition: all linear 0.2s;
   &:hover {
     filter: none;
     -webkit-filter: none;
+    overflow: visible;
+    > div:last-child {
+      height: auto;
+    }
   }
   img {
     width: 100%;
   }
+}
+.projectDescription {
+  transition: all 0.2s linear;
+  padding: 0px;
+  align-items: center;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  // position: absolute;
+  // bottom: 0;
+  // font-weight: bold;
+  text-align: center;
 }
 
 .technology {
@@ -24,6 +41,7 @@
   background: #eee;
   display: inline-block;
   margin-right: 15px;
+  margin-top: 10px;
   padding: 5px 10px;
   border-radius: 15px;
 }

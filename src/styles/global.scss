@@ -5,6 +5,13 @@ code {
   color: green;
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background-color: black;
+    color: white;
+  }
+}
+
 body.dark {
   background-color: black;
   color: white;
@@ -40,7 +47,7 @@ body.dark {
 }
 
 .experience-block {
-  min-height: 600px;
+  position: relative;
 }
 
 .experience-item {
@@ -50,8 +57,9 @@ body.dark {
   border-color: black;
   min-height: 100px;
   margin: 10px 0;
+  position: relative;
   &:nth-child(odd) {
-    float: right;
+    left: 50%;
     text-align: left;
     border-left-style: solid;
     padding-left: 20px;
@@ -72,6 +80,11 @@ body.dark {
     padding: 5px;
     padding-top: 10px;
     font-weight: bold;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 }
 

@@ -6,7 +6,7 @@ const ProjectCard = ({ project }) => {
   const { name, site, image, technologies, description } = project
 
   return (
-    <div className="col-md-6">
+    <div className="col-md-6" style={{ position: "relative" }}>
       <h2>{name}</h2>
       <b>
         <a
@@ -18,19 +18,21 @@ const ProjectCard = ({ project }) => {
           {site}
         </a>
       </b>
-      <p>{description}</p>
-      {technologies.length && (
+      {technologies && technologies.length && (
         <div>
           {technologies.map(technology => (
             <div className={styles.technology}>{technology}</div>
           ))}
         </div>
       )}
-      {image && (
+      <div>
         <div className={styles.imageWrapper}>
-          <Img fluid={image.childImageSharp.fluid} />
+          {image && <Img fluid={image.childImageSharp.fluid} />}
+          {description && (
+            <div className={styles.projectDescription}>{description}</div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   )
 }

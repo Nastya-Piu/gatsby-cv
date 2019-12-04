@@ -3,24 +3,28 @@
     "name": "Inspectorio",
     "site": "https://www.inspectorio.com/",
     "image": "./images/3-1.png",
-    "technologies": ["Angular 7", "HTML", "CSS", "JS", "GitLab"]
+    "technologies": ["Angular 7", "HTML", "CSS", "JS", "GitLab"],
+    "description": "Inspectorio is a platform for quality control and compliance monitoring. It digitizes and optimizes the compliance process and brings transparency to supply chains leveraging machine learning, mobile technologies and IoT."
   },
   {
     "name": "Stacktome",
     "site": "https://stacktome.com/",
     "image": "./images/4-1.png",
-    "technologies": ["Angular 5", "HTML", "CSS", "JS", "Jenkins"]
+    "technologies": ["Angular 5", "HTML", "CSS", "JS", "Jenkins"],
+    "description": "The mission of that project is to increase e-commerce shops revenue by segmenting customers in different categories based on sales data and run marketing strategy compatible for this segment."
   },
   {
     "name": "Learning Banknotes System",
     "site": "http://learning.banknotes.by",
     "image": "./images/1-1.png",
-    "technologies": ["Angular 4", "HTML", "JS", "CSS", "Stylus"]
+    "technologies": ["Angular 4", "HTML", "JS", "CSS", "Stylus"],
+    "description": "This project is for those who want to know everything about selected currencies and their banknotes to check their authenticity. Project offers to create groups for chosen course and watch their learning statistics. Or you can listen course individually. Student should read theory part and then pass some tests to check their knowledge’s."
   },
   {
     "name": "Tripstore",
     "site": "http://tripstore.by",
     "image": "./images/2-1.png",
-    "technologies": ["Angular 4", "Node js", "HTML", "CSS", "JS"]
+    "technologies": ["Angular 4", "Node js", "HTML", "CSS", "JS"],
+    "description": "It is implementation of Travel portal with information about countries, cities, showplaces, tours and tour agencies. This app includes two parts: one for travelers and one for travel agencies (admin part)."
   }
 ]
