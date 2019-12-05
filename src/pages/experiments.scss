@@ -27,3 +27,144 @@
     }
   }
 }
+
+@keyframes example {
+  from {
+    background-color: deeppink;
+  }
+  to {
+    background-color: firebrick;
+  }
+}
+
+.keyframe-try {
+  > div {
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    animation-name: example;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.pure-css-img {
+  background: #25a9fc;
+  .box {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    width: 600px;
+    height: 420px;
+    background: none;
+    .head {
+      position: absolute;
+      top: 16.5%;
+      width: 50%;
+      left: 25%;
+      height: 67%;
+      background: #a6becf;
+      border-radius: 50%;
+
+      .head-copy {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        background: #a6becf;
+        border-radius: 50%;
+      }
+      div[class^="ear-"] {
+        position: absolute;
+        width: 60%;
+        height: 65%;
+        border-radius: 50%;
+        z-index: 1;
+        background: #a6becf;
+      }
+      .ear-left {
+        left: -20%;
+        top: 5%;
+      }
+      .ear-right {
+        right: -20%;
+        top: 5%;
+      }
+
+      .inner-ear {
+        position: absolute;
+        border-radius: 50%;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        background: #819caf;
+      }
+
+      div[class^="eye-"] {
+        position: absolute;
+        background: white;
+        width: 30%;
+        height: 33%;
+        z-index: 3;
+        border-radius: 50%;
+        top: 25%;
+      }
+
+      .eye-left {
+        left: 21%;
+      }
+      .eye-right {
+        right: 21%;
+      }
+
+      .pupil {
+        position: absolute;
+        width: 28%;
+        height: 30%;
+        top: 35%;
+        left: 36%;
+        border-radius: 50%;
+        background: #27354a;
+        // border: 10px solid red;
+      }
+      .nose {
+        position: absolute;
+        background: #be845f;
+        width: 25%;
+        height: 42.5%;
+        left: 37%;
+        top: 45%;
+        border-radius: 50px;
+        z-index: 4;
+      }
+
+      div[class^="hair-"] {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        background: #a6becf;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+
+      .hair-left {
+        top: -8%;
+        left: 30%;
+      }
+
+      .hair-right {
+        top: -4%;
+        left: 48%;
+      }
+    }
+  }
+}
+
+.solar-system {
+  height: 100vh;
+  background: #222;
+  margin: 100px 0;
+  padding: 20px;
+}

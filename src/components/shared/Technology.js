@@ -26,7 +26,14 @@ const Technology = ({ title, year, level }) => {
       setTimeout(() => {
         setAnimate(true)
       }, 500)
-  }, [animate])
+  }, [])
+
+  const levelStyle = state => {
+    return {
+      width: `${state === "entered" || state === "entering" ? level : 0}%`,
+      opacity: `${state === "entered" || state === "entering" ? 1 : 0}`,
+    }
+  }
 
   return (
     <div>
@@ -36,20 +43,7 @@ const Technology = ({ title, year, level }) => {
       </div>
       <Level>
         <Transition in={animate} timeout={500}>
-          {state => (
-            <LevelBar
-              style={{
-                width: `${
-                  state === "entered" || state === "entering" ? level : 0
-                }%`,
-                opacity: `${
-                  state === "entered" || state === "entering" ? 1 : 0
-                }`,
-              }}
-            >
-              {level} %
-            </LevelBar>
-          )}
+          {state => <LevelBar style={levelStyle(state)}>{level} %</LevelBar>}
         </Transition>
       </Level>
     </div>

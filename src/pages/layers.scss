@@ -1,0 +1,146 @@
+.cover-container {
+  background-color: #dadada;
+  background: black url(../images/bgfull.png) repeat-y;
+  background-size: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 0;
+  $self: &;
+  &__some-child {
+    background: white;
+    color: black;
+  }
+  &--reveresed {
+    #{ self }__some-child {
+      background: black;
+      color: white;
+    }
+  }
+}
+
+.bg-block {
+  background: #dadada;
+  height: 100vh;
+  position: relative;
+}
+
+.back-text,
+.front-text {
+  position: absolute;
+  top: 20%;
+  font-size: 12em;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+
+.front-text {
+  top: 40%;
+  z-index: 3;
+}
+
+.fixed-img {
+  background: transparent url(../images/bg.png);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: 600px 600px;
+  overflow: hidden;
+  background-position-x: 50%;
+  background-position-y: 95%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+}
+
+.text-block {
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.no-bg-text {
+  height: 100vh;
+  font-size: 10em;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.pages {
+  // display: grid;
+  // grid-template-columns: repeat(16, 1fr);
+  display: flex;
+  > div {
+    flex: 1 1 auto;
+    color: white;
+    padding: 20px 10px;
+    opacity: 0.25;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease-in;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.9);
+      transition: background 0.2s ease-in;
+    }
+  }
+}
+
+.additional-text {
+  background: #fefefe;
+  color: black;
+  padding: 20px;
+  section {
+    float: left;
+    width: 46%;
+    column-count: 1;
+    column-gap: 0;
+    display: block;
+    margin: 0 2%;
+  }
+  hr {
+    clear: both;
+  }
+}
+
+.flip-example {
+  width: 450px;
+  height: 250px;
+  margin: 20px auto;
+  cursor: pointer;
+  perspective: 1000;
+  &__flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.8s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 1000;
+    backface-visibility: hidden;
+    background: #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  &__back {
+    transform: rotateY(180deg);
+  }
+  &:hover {
+    .flip-example__flipper {
+      transform: rotateY(180deg);
+    }
+  }
+}
